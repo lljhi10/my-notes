@@ -6,3 +6,5 @@ function createAndDownloadFile(fileName, content) {
             aTag.click();
             URL.revokeObjectURL(blob);
         }
+
+在js中获得的数据可以选择这种方式
