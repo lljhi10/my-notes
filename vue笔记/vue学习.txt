@@ -1,0 +1,53 @@
+挂载点(写了id的元素) 模板(挂载点内部的代码或者实例里面的tmplate:后面的代码) 实例(new Vue)
+
+v-text
+{{}}  //和上面等价
+v-html
+
+
+1.事件
+v-on:click="handleClick"     简写为:      @click="handleClick"  //不用括号哦
+
+
+methods:{functionName:function(){//}}
+
+2.属性绑定
+挂载点内: v-bind:title="msg"      缩写为:             :title="msg"    //不要漏冒号
+这个表示htm的title属性里面msg不是字符串了,而是vue实例的成员的值了.
+
+3.双向绑定
+挂载点内: v-model="msg"   双向绑定概念可查网上
+
+4.计算属性
+页面:{{fullName}}
+js:Vue的成员加一个
+
+ computed:{
+	fullName:function(){ruturn this.fName+""+this.lName}
+}
+
+5.监听器属性:watch:{firstName:function(){this.count++}}//监听firstName这个数据
+6.v-if 和v-show 控制显示隐藏
+7.v-for
+v-for="item of list"//用于展示数组(list)
+v-for="(item,index) of list" :key="index"  //提高性能
+
+8.定义全局组件:
+Vue.component('component-name',{template:"<li>.....<li>"})
+使用:<component-name></..>
+9.定义局部组件:
+var TodoItem={template:"<li>.....<li>"}
+在Vue对象里面增加:
+components:{
+	'todo-item':TodoItem
+}//注册组件
+页面:<todo-item></..>
+10.父组件(实例其实是父组件)传递值给子组件:
+是通过属性的形式       
+什么事属性:<  ....       :content="item"> 这个content就是属性,表示父组件定义属性以及值    然后在组件里面,props:['content']表示接收这个属性的值
+
+
+11.this.$emit('delete',val) 触发事件.     @delete        (不写实参的方法默认传event )  
+
+12.// 手动挂载讲实例模板添加dom元素(不推荐这种方式推荐v-if)
+new myAppendTo().$mount().$appendTo('#app');//appendTo

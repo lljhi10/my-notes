@@ -1,0 +1,2 @@
+1.CTRL + F5 强制全部刷新，忽略缓存并全部刷新。
+2.就是在 开发工具中， Console， 设置里面勾选  Disable cache (while DevTools is open

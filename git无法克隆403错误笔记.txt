@@ -1,0 +1,8 @@
+原因是:git config --global credential.helper store该命令可以将用户名和密码长期全局地长期地存储在客户端（实际是客户端所在电脑，并非git的任何目录下，也就是说，即使重装git，改密码也存在。）。因为，这里保存的账号和密码会自动应用到每一个git clone指令，如果想要克隆的不是该账号下的项目，就只会得到403错误。
+解决办法：
+方法一:
+增加远程地址的时候带上密码也是可以的。(推荐)
+
+http://yourname:password@git.oschina.net/name/project.git
+方法二：
+运行命令：rm ~/.git-credentials，删掉git config --global credential.helper store保存的账号和密码。回到每次输入用户名和密码。

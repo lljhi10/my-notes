@@ -1,0 +1,22 @@
+<dependency>
+			<groupId>cn.hyperchain.javasdk</groupId>
+			<artifactId>hyperchainsdk</artifactId>
+			<version>4.1.6</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/hyperchainsdk-4.1.6-jar-with-dependencies.jar</systemPath>
+		</dependency>
+
+buidÀïÌí¼Ó:
+<resources>
+			<resource>
+				<directory>libs</directory>
+				<targetPath>BOOT-INF/lib/</targetPath>
+				<includes>
+					<include>**/*.jar</include>
+				</includes>
+			</resource>
+		</resources>
+
+
+
+

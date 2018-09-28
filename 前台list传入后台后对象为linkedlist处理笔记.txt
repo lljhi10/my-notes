@@ -1,0 +1,3 @@
+            List<LinkedHashMap> list=request.attribute("accountList");
+            ObjectMapper mapper = new ObjectMapper();
+            List<AccountInfo> accountInfoList = mapper.convertValue(list, new TypeReference<List<AccountInfo>>() { });

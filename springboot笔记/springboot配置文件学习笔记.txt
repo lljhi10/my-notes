@@ -1,0 +1,43 @@
+application.yml：
+写：
+	cupSize:B
+
+
+java中调用,这样：
+	@value("${cupSize}")
+	private String cupSize; 
+
+
+---------------------------------------------
+application.yml：
+写：
+	girl:
+		cupSize:B
+		age:8
+
+
+
+进阶：
+	@Component 
+	@ConfigurationProperties(prefix="girl")
+	public class GirlProperties{
+		private String cupSize;
+		private Integer age;
+		//set get 省略
+	} 
+
+java中调用,这样：
+	@Autowired
+	private GirlProperties girlProperties; 
+	//使用girlProperties.getCupSize();
+
+
+-----------------------------------------------
+application配置文件的引入：
+ 文件夹有三个配置文件：application.yml，application-dev.yml，application-prod.yml
+那么要使用application-dev.yml里面的配置时候，只需要在application.yml加入：
+spring:profiles:active:dev
+使用application-prod.yml时候把dev改成prod
+
+
+用mvn打包的jar跑项目：java -jar target/horizon-coupon-1.2-2018-04-25_11_25.jar --server.port=8082

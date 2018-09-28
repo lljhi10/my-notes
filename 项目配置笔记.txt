@@ -1,0 +1,6 @@
+--coupon-chain.ribbon.listOfServers=http://ann-coupon-api.zhongan.io
+--spring.data.mongodb.uri=mongodb://39.108.170.217:27017
+--sparkjava.port=8084
+--passWord=123;xjCoupon@csair.com;hlyCoupon@csair.com
+--sign.test=true
+--environment.isdev=false

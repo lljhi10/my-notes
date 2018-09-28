@@ -1,0 +1,4 @@
+<form name="user" class="form-horizontal">
+<input  name="appName" class="form-control" ng-model="data.appName" ng-maxlength="6" required="required" />
+                    <span ng-show="user.appName.$error.required">不能为空这个是根据表单name.input框name</span>
+                    <span ng-show="user.appName.$error.maxlength">不能超过6字符</span>

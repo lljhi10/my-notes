@@ -1,0 +1,17 @@
+1.action的名字（页面和Struts.xml中）最好不要跟类名一样(反正我用register出错了)，具体原因不知；
+2.web.xml要加：
+<filter-mapping>  
+    	<filter-name>struts2</filter-name>  
+    	<url-pattern>*.jsp</url-pattern>  
+	</filter-mapping>
+3.页面要加：下面第二行dtd
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+4.重要！The file cannot be validated as there was a connection problem.就是校验框架****-validation.xml有个感叹号报的警示
+，因为包已经不在原网页，被Apache收了，改成如下：
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0.2//EN" "http://struts.apache.org/dtds/xwork-validator-1.0.2.dtd">
+
+参考网页
+http://blog.csdn.net/cjl900226/article/details/45478787
+

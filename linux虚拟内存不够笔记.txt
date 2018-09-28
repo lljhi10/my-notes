@@ -1,0 +1,5 @@
+修改配置文件/etc/sysctl.conf, 在最后加上一行：
+
+fs.file-max = 34166
+
+https://blog.csdn.net/alangmei/article/details/23249829

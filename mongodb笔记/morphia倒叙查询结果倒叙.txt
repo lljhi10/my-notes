@@ -1,0 +1,7 @@
+... // desc order  
+Query q = ds.createQuery(MyEntity.class).filter("foo >", 12).order("-dateAdded");  
+... // asc dateAdded, desc foo  
+Query q = ds.createQuery(MyEntity.class).filter("foo >", 12).order("dateAdded, -foo");  
+
+
+c+s+e 打开最近的文件

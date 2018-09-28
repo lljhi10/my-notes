@@ -1,0 +1,14 @@
+昨天学mongdb的时候，遇到了mongod.exe闪退的问题，解决办法很简单
+
+在你安装mongdb的盘的根目录下创建一个data文件夹，一定要在根目录下，而且最好建议把mongodb安装到某个盘的根目录下，比如我的mongdb安装在C:下面的，我在C:下创建一个新文件夹data（这个文件夹是用来存储数据的）现在要启动数据库服务，需要先配置一下你要存储数据的地址，打开cmd命令窗口，进入到mongodb\bin目录下输入：
+
+mongod --dbpath c:\data
+
+连接成功以后就可以去浏览器打开http://localhost:27017如果看到
+
+It looks like you are trying to access MongoDB over HTTP on the native driver port.
+则已经连接成功了。
+
+
+
+mongod --dbpath d:/mgdbpath

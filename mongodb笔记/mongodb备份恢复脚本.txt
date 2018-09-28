@@ -1,0 +1,25 @@
+--启动mongodb
+mongod --dbpath C:\Users\foxyll\software\development\mongodb\data
+
+--把mongodb生成window服务
+mongod --logpath C:\Users\foxyll\software\development\mongodb\data\log\mongodb.log --logappend --dbpath C:\Users\foxyll\software\development\mongodb\data --directoryperdb --serviceName "MongoDB" --install
+或者 https://blog.csdn.net/qq451354/article/details/72733489
+
+mongod --config C:\Users\foxyll\software\development\mongodb\MongoDB\Server\3.4\mongo.config --install --serviceName "MongoDB" --journal
+
+
+--备份数据库
+mongodump -h chain3.valuecom.io --port 27017 -d value-silverchain2 -o C:\Users\foxyll\software\development\mongodb\back\value-silverchain2
+mongodump -h 127.0.0.1 --port 27017 -d value-silverchain3 -o C:\Users\foxyll\software\development\mongodb\back
+mongodump -h 127.0.0.1 --port 27017 -d tech_horizon-coupon -o C:\Users\foxyll\software\development\mongodb\back
+--恢复指定服务器的库中
+mongorestore -h chain3.valuecom.io --port 27017 -d value-silverchain10 --drop C:\Users\foxyll\software\development\mongodb\back\value-silverchain2\value-silverchain2
+
+mongorestore -h 127.0.0.1 --port 27017 -d tech_horizon-coupon --drop C:\Users\foxyll\software\development\mongodb\back\tech_horizon-coupon
+
+mongorestore -h 127.0.0.1 --port 27017 -d tech_horizon-coupon --drop /root/mongodbback/tech_horizon-coupon
+
+
+mongorestore -h 127.0.0.1--port 27017 -d value-silverchain2 --drop C:\Users\llj\Documents\Tencent Files\982896506\FileRecv\back\value-silverchain2
+
+mongodump -h 192.168.8.2 --port 27017 -d value-silverchain -o C:\Users\llj\Documents\Tencent Files\982896506\FileRecv\back

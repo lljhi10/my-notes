@@ -1,0 +1,5 @@
+
+--备份数据库
+mongodump -h [图片]39.108.170.217 --port 27017 -d value-silverchain -o C:\Users\foxyll\software\development\mongodb\back\value-silverchain
+--恢复
+mongorestore -h 127.0.0.1 --port 27017 -d value-silverchain --drop C:\Users\foxyll\software\development\mongodb\back\value-silverchain\value-silverchain

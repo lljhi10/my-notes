@@ -1,0 +1,10 @@
+npm install -g @vue/cli
+然后查看vue -V 发现是v3.0.0-beta1.6在执行下面的一句话：
+npm install -g @vue/cli-init
+
+npm install --global vue-cli
+切换到你要安装的目录开始创建工程
+vue init webpack project-Name   
+按照默认一路点yes或者no进行创建
+cd  project-Name   
+再  npm run dev就可以了

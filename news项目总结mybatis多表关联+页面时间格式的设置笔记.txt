@@ -1,0 +1,74 @@
+news项目总结
+1.确保复制粘贴的项目改动的关键字是否修改，每一个都要ctrl +f
+1.5.一般新建项目直接在org.eclipse.wst.common.project.facet.core.xml改成对应版本号，不要去设置project facets
+2.  Java ...1.6or newer  先检查项目设置里面两处有没有成功改成对应Java版本，若还有错，更改项目目录下的
+setting下的org.eclipse.wst.common.project.facet.core.xml，若还有错pom.xml里面build里面加
+<plugins>  
+    <plugin>  
+        <groupId>org.apache.maven.plugins</groupId>  
+        <artifactId>maven-compiler-plugin</artifactId>  
+        <version>2.3.2</version>  
+        <configuration>  
+            <source>1.8</source>  
+            <target>1.8</target>  
+        </configuration>  
+    </plugin>  
+	</plugins> 
+3.spring xml配置有事报错c.2之类的是因为格式，这时候可以在关键位置回车换行，保存再刷新项目
+4.spring-mvc 加上
+	<mvc:annotation-driven />
+		<!-- 	<mvc:resources mapping="/style/**" location="/style/"/> -->
+ 		<mvc:resources mapping="/js/**" location="/js/" /> 
+		<mvc:resources mapping="/images/**" location="/images/" /> 
+		<mvc:resources mapping="/uedit/**" location="/uedit/" /> 
+	<mvc:annotation-driven />
+就可以防止找不到外部引入的文件的错误（比如引入jquery）
+5.关于时间，model用import java.util.Date;  数据库用 datetime 
+在控制器里面new Date 获得当前时间      set方法设置时间即可，mapper.xml里面jdbcType不用写！
+jsp（HTML）设置时间格式 先引入<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+再在value里设<fmt:formatDate value="${news.newsAddTime}" pattern="yyyy-MM-dd HH:mm:ss"/>
+6.js里要设置根据后台数据来选中radio框，目前只能唯一一种方法（其他方法不行）：
+$(function () {
+ 		var stick='${news.stick }';
+ 		//$("#stick").empty();
+ 		if(stick==1){
+ 			$("#stick").append("<label>是否置顶：</label>"+
+ 		   			"<input type='radio'  name='stick' value='1' checked='checked'> 是"+
+ 		    		"<input type='radio'  name='stick' value='2' > 否");
+ 		}
+ 		else if(stick==2){
+ 			$("#stick").append("<label>是否置顶：</label>"+
+ 		   			"<input type='radio'  name='stick' value='1'> 是"+
+ 		    		"<input type='radio'  name='stick' value='2'  checked='checked'> 否");
+ 		}
+ 		else{
+ 			$("#stick").append("<label>是否置顶：</label>"+
+ 		   			"<input type='radio'  name='stick' value='1'> 是"+
+ 		    		"<input type='radio'  name='stick' value='2'> 否");
+ 		}
+	})
+
+还有一种方法:$("input[type='radio'][value="+choseGender+"]").prop("checked",true);//
+
+
+
+
+
+
+
+
+
+
+
+根据数据Mf ,页面输出男女，三目运算
+<th>${emp.gender.equals("M")?"男":"女" }</th>
+
+
+
+页面改时间格式
+$('#rushEndTime').val(
+								data.rushEndTime ? new Date(data.rushEndTime)
+										.format("yyyy/MM/dd") : '');
+
+
+

@@ -1,0 +1,26 @@
+多表关联mapper.xml：加入product对象：注意第一个id
+<resultMap id="BaseResultMapPage" type="com.myweb.model.order.vo.Order" extends="BaseResultMap">
+		<association property="product" column="productId" select="getProduct"></association>
+</resultMap>
+
+<resultMap id="ProductBaseResultMap" type="com.myweb.model.order.vo.Product">
+		<result property="id" column="id" />
+		<result property="code" column="code" />
+		<result property="productType" column="product_type" />
+		<result property="titile" column="titile" />
+	</resultMap>
+<select id="getProduct"  resultMap="ProductBaseResultMap">
+	  	<![CDATA[
+			SELECT 
+				t_product.id AS id ,
+	        	t_product.code AS code ,
+	        	t_product.product_type AS productType ,
+				t_product.titile AS titile ,
+				t_product.img_url AS imgUrl
+			FROM t_product WHERE  t_product.id = #{productId}
+		]]>
+		
+	</select>
+并且在实体类Order.java中添加：
+private Product product;
+以及set和get方法

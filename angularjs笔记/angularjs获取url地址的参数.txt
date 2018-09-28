@@ -1,0 +1,12 @@
+http://www.jb51.net/article/93291.htm
+
+  urlÎª£ºhttp://localhost:8080/showOne?id=1102
+
+
+  var app = angular.module('myApp', []);
+
+
+        app.controller('appController',function($scope, $location) {
+          
+            $scope.order_id=$location.search().id;//È¡µ½1102
+        });

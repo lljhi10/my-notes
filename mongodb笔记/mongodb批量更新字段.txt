@@ -1,0 +1,5 @@
+db.getCollection('account_info').find().forEach(
+   function(item){                
+       db.account_info.update({"_id":item._id},{"$set":{"status":"NORMAL"}},false,true)
+    }
+)

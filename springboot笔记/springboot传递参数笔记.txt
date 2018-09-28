@@ -1,0 +1,15 @@
+第一种（比较少用）：
+url：localhost:8080/getList/say/id/80 
+方法写法：
+@RequestMapping(value="/say/{id}",method=RequestMethod.GET)
+ public String say(@pathVariable("id" ) Integer id)
+
+第二种：
+url：localhost:8080/getList/say?id=100
+方法的写法：
+@RequestMapping(value="/say",method=RequestMethod.GET)
+ public String say(@RequestParam("id" ) Integer did)
+可以设置默认参数值（也可以设置是否必须要参数）：
+@RequestMapping(value="/say",method=RequestMethod.GET)
+ public String say(@RequestParam(value="id" required=false,defaultValue="0" ) Integer did)
+

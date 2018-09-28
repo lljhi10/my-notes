@@ -1,0 +1,3 @@
+Error resolving template removeApplicationById, template might not exist o
+
+可能是没有@responsebody

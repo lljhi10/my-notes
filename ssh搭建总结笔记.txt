@@ -1,0 +1,6 @@
+逆向工程要学
+配置文件property不能又空格
+web.xml web的版本要对应。报错：2.3或者2.5
+webapp要加content目录，类名与视图jsp名对应：UserInfoAction对应/user/user-info.jsp    UserinfoAction对应/user/userinfo.jsp 
+
+http://blog.csdn.net/fengshizty/article/details/43794911

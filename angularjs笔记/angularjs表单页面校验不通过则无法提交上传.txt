@@ -1,0 +1,2 @@
+在button或submit上设置
+ng-disabled="formName.$invalid"

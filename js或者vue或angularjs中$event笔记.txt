@@ -1,0 +1,5 @@
+$event :当前event对象
+使用$event 获取Dom对象:$event.target
+判断获取到的chexbox是否选中:假设获取到的是chexbox :$event.target.checked =true
+
+this.$emit('delete',this.index); 在js触发定义的delete时间$emit表示触发

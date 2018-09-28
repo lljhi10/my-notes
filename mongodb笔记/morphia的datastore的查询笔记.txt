@@ -1,0 +1,5 @@
+ Query<CouponInstance> query = datastore.find(CouponInstance.class);
+       // query.filter("batch_no",BathNo).and(query.criteria("bindTime").notEqual(null));//等价于下面的，BathNo是传递的参数
+        query.and(query.criteria("bindTime").notEqual(null))
+                .and(query.criteria("batch_no").equal(BathNo));
+	query.asList.size();//这个就可以用来数有几个查询结果

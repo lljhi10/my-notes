@@ -1,0 +1,3 @@
+做了手机查询，查到的手机号list，用query无论怎么循环都是and查询（与查询）；把查询的法则装在CriteriaContainer对象，新建一个CriteriaContainer的集合，每次循环要写的查询语句都放进CriteriaContainer对象里，然后通过or（collect.toArray(new Criteria[collect.size()])）
+改了券发放详情中已过期的券不能统计的bug。
+改了券发放详情中根据批次号倒序排列。给导航条的链接做了调整。

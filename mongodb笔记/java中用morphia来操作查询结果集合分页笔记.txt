@@ -1,0 +1,2 @@
+实现page的分割，在使用query.asList()的时候里面加上参数
+List<CouponInstance> couponInstance = query.asList(new FindOptions().skip(beforeCount).limit(pageSize));

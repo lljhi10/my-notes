@@ -1,0 +1,38 @@
+
+1快捷键Ctrl + Alt + S打开设置面板，build-compiler---勾选 Build project automatically选项
+
+
+2 快捷键Ctrl + Shift + A查找registry命令： 在查找到的registry命令通过鼠标双击或敲回车键，在弹出的面板中搜索关键字automake，找到并勾选compiler.automake.allow.when.app.running选项：
+
+3 添加 Spring Boot Dev Tools 支持
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-devtools</artifactId>
+    <optional>true</optional>
+</dependency>
+
+
+http://fanlychie.github.io/post/resolve-intellij-idea-spring-boot-template-reload-is-not-working.html
+
+
+
+4.这是另外一种方法在build里面添加
+<plugins>
+			<plugin>
+				<!--  <finalName>silverchain-1.0-${maven.build.timestamp}</finalName> -->
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<dependencies>    <!-- 修改代码后自动生效，Reload Java classes without restarting the container -->
+					<dependency>
+						<groupId>org.springframework</groupId>
+						<artifactId>springloaded</artifactId>
+						<version>1.2.6.RELEASE</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+
+		</plugins>
+
+
+
+

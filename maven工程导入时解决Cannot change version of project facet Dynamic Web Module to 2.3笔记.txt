@@ -1,0 +1,4 @@
+解决方法：修改web.xml，在头部加入内容，加入后为：
+<?xml version="1.0" encoding="UTF-8"?>  
+<web-app    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
