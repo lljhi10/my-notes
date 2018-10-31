@@ -27,6 +27,9 @@ setting下的org.eclipse.wst.common.project.facet.core.xml，若还有错pom.xml里面bui
 在控制器里面new Date 获得当前时间      set方法设置时间即可，mapper.xml里面jdbcType不用写！
 jsp（HTML）设置时间格式 先引入<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 再在value里设<fmt:formatDate value="${news.newsAddTime}" pattern="yyyy-MM-dd HH:mm:ss"/>
+
+    第二种方法:直接在modol中字段加@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+
 6.js里要设置根据后台数据来选中radio框，目前只能唯一一种方法（其他方法不行）：
 $(function () {
  		var stick='${news.stick }';
