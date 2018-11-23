@@ -1,0 +1,17 @@
+https://www.cnblogs.com/baby123/p/6588378.html
+
+git stash (list)
+ 
+git pull 
+
+git stash pop 
+
+然后再编辑冲突的文件
+这个操作就是把自己修改的代码隐藏，然后把远程仓库的代码拉下来，然后把自己隐藏的修改的代码释放出来，让gie自动合并。
+
+
+
+如果要代码库的文件完全覆盖本地版本。 
+:git reset –hard 
+
+git pull
