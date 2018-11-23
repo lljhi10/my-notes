@@ -3,3 +3,5 @@ http://git.valuecom.io:8844/r/silverchain.git
 http://git.valuecom.io:8844/r/couponchain.git
 http://39.108.170.217:8844/r/coupon.git
 http://git.valuecom.io:8844/r/silverchainApp.git
+http://git.valuecom.io:8844/r/csexchangeplatform.git
+http://git.valuecom.io:8844/r/faceserver.git
