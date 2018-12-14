@@ -1,0 +1,2 @@
+可以在jdbc的url中增加&serverTimezone=GMT%2B8。把mysql的时区定义为+8时区从而统一时区。
+
