@@ -1,0 +1,24 @@
+ 
+1.微信数据绑定,set和get数据,注意是  this.data.参数名
+   var that=this;
+    let test =option.id;
+    that.setData({
+      test:test
+    })
+    // console.log( option.id);
+    console.log(that.data.test);//!!!!
+2.函数传参:
+bindtap="toDetail" data-variable="南航" //按钮或view绑定函数和参数值
+toDetail: function (e) {
+    var name = e.currentTarget.dataset.variable;//获取参数   
+  }
+
+
+3.url传参:
+wx.navigateTo({
+        url:'./detail?id='+name
+    })
+detail.js:
+onLoad: function(option){
+    let test =option.id;//接收参数
+}

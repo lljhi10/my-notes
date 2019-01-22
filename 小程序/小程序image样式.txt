@@ -1,0 +1,9 @@
+.image{
+        width: 63px;
+        height: 63px;
+        // border-radius: 50%;
+        // background-color:#FCB300; 
+        border:gray 3rpx solid;
+        text-align: center;
+        line-height: 50px;
+    }

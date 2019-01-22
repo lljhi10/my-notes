@@ -1,0 +1,15 @@
+    wx.request({
+          url: "http://localhost:8106/v1/transation/ratio",
+          method: "POST",
+          data: {
+          },
+          header: {
+            "Content-Type": "application/json"
+          },
+          success: function (res) {
+            // that.toasync();
+            console.log(res.data);
+          },
+        });
+
+//post的消息头往往不是json
