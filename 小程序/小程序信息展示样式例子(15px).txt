@@ -1,0 +1,87 @@
+<template>
+  <view>
+    <!-- <button bindtap="hello">按钮</button> -->
+    <view class="title-box">电信7天流量包</view>
+    <view class="box">
+      <view class="box-row">
+        <view class="row-part1">市场价:</view>
+        <view class="row-part2">100</view>
+      </view>
+      <view class="box-row">
+        <view class="row-part1">市场价:</view>
+        <view class="row-part2">100</view>
+      </view>
+    </view>
+    <view class="box">
+      <view class="box-row">
+        <view class="row-part1">积分兑换:</view>
+        <view class="row-part2">100</view>
+      </view>
+    </view>
+    <view class="box">
+      <view class="box-row">
+        <view class="row-part1">使用说明:</view>
+      </view>
+      <view class="box-row">
+          <text>
+            Effective Microorganisms的简写，意思是“有效微生物群”。它是光合细菌、乳酸菌群、酵母菌群、放线菌群、 丝状菌群等5科10属80余种微生物组成的。它是由世界著名应用微生物学家日本琉球大学比嘉照夫教授发明的， EM技术是目前世界上应用范围最大的一项生物工程技术。 和一般生物制剂相比，它具有结构复杂、性能稳定、 功能齐全的优势，表现出前所未有的高科技水平。迄今为止，EM已狂风般席卷日本、美国、巴西、法国、台湾等90多个国家和地区。据资料报道，EM适用于种植业、养殖业、环保、人体保健等多种领域。
+          </text>
+      </view>
+    </view>
+
+  </view>
+</template>
+
+<script>
+export default {
+  config: {
+    navigationBarTitleText: "图片上传"
+  },
+  data: {
+    tempFilePaths: ""
+  },
+  hello: function(e) {
+    wx.showModal({
+      title: "提示",
+      content: "这是一个模态弹窗",
+      success(res) {
+        if (res.confirm) {
+          console.log("用户点击确定");
+        } else if (res.cancel) {
+          console.log("用户点击取消");
+        }
+      }
+    });
+  }
+};
+</script>
+
+<style lang="less">
+.title-box {
+  border-bottom: 2rpx solid #cecece;
+  padding: 40rpx 30rpx 30rpx 30rpx;
+  font-size: 17px;
+  font-weight: 400;
+}
+.box {
+  border-bottom: 2rpx solid #cecece;
+  padding: 30rpx 30rpx 14rpx 30rpx;
+  font-size: 14px;
+}
+.box-row {
+  margin-bottom: 16rpx;
+  display: flex;
+  display: -webkit-flex;
+    // -webkit-flex-wrap: nowrap;
+  // flex-wrap: nowrap; //换行
+}
+.row-part1,
+.rwo-part2 {
+  width: 50%;
+}
+.box-row text{
+  font-size: 13px;
+  color: #888888;
+}
+
+</style>
