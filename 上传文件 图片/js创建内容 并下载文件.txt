@@ -1,0 +1,10 @@
+function createAndDownloadFile(fileName, content) {
+            var aTag = document.createElement('a');
+            var blob = new Blob([content]);
+            aTag.download = fileName;
+            aTag.href = URL.createObjectURL(blob);
+            aTag.click();
+            URL.revokeObjectURL(blob);
+        }
+
+在js中获得的数据可以选择这种方式

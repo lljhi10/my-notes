@@ -1,0 +1,27 @@
+银联节点
+java -jar ../silverchain-0.0.1-SNAPSHOT.jar --server.port=8075 --spring.data.mongodb.database=value-silverchain --spring.data.mongodb.uri=mongodb://127.0.0.1:27017 --chain.ip=http://scapi.valuecom.io:6010 --unionpay.consume=http://upay.valuecom.io:8055/upservice/v1/consume --dev.suffix=llcl_ 
+
+银联旧节点
+java -jar silverchain-0.0.1-SNAPSHOT.jar --server.port=8075 --spring.data.mongodb.database=value-silverchain --spring.data.mongodb.uri=mongodb://127.0.0.1:27017 --chain.ip=http://scapi.valuecom.io:6010 --unionpay.consume=http://upay.valuecom.io:8055/upservice/v1/consume --dev.suffix=llcl_ 
+
+java -jar silverchain-0.0.1-SNAPSHOT.jar --server.port=8075 --chain.ip=http://scapi.valuecom.io:6010 --dev.suffix=llcl_ --spring.data.mongodb.database=value-silverchain --spring.data.mongodb.uri=mongodb://127.0.0.1:27017 --unionpay.consume=http://upay.valuecom.io:8055/upservice/v1/consume 
+
+南航节点
+java -jar ../silverchain-0.0.1-SNAPSHOT.jar --server.port=8085 --spring.data.mongodb.database=value-silverchain2 --spring.data.mongodb.uri=mongodb://127.0.0.1:27017 --chain.ip=http://scapi.valuecom.io:6010 --unionpay.consume=http://upay.valuecom.io:8055/upservice/v1/consume --dev.suffix=llcl_ 
+
+周大福节点
+java -jar ../silverchain-0.0.1-SNAPSHOT.jar --server.port=8095 --spring.data.mongodb.database=value-silverchain3 --spring.data.mongodb.uri=mongodb://127.0.0.1:27017 --chain.ip=http://scapi.valuecom.io:6010 --unionpay.consume=http://upay.valuecom.io:8055/upservice/v1/consume --dev.suffix=llcl_ 
+
+test业务：
+java -jar test-1.0-SNAPSHOT.jar --server.port=8100
+
+业务api
+{"urlPath":"http://localhost:8100/hello","methodType":"POST","params":["S_Token","I_Amount","I_UID_IN","I_N_IN"],"returnName":"S_rc"}
+
+
+http://localhost:8095/login/v1/right?test=test
+
+中间件：
+java -jar unionpayservice-0.0.1-SNAPSHOT.jar --spring.data.mongodb.uri=mongodb://127.0.0.1:27017 --cert.path=C:\Users\foxyll\deploytest\unionpayservice\unionpayservice-0.0.1-SNAPSHOT\BOOT-INF\classes
+
+在执行之前先把节点调为本地(192.168.8.9)
