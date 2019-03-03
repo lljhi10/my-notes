@@ -10,9 +10,9 @@ git stash pop
 
 
 	
-               git stash drop stash@{0} 删除冲突标记
+git stash drop stash@{0} 删除冲突标记
 
-然后再编辑冲突的文件
+先stash然后再编辑冲突的文件
 这个操作就是把自己修改的代码隐藏，然后把远程仓库的代码拉下来，然后把自己隐藏的修改的代码释放出来，让gie自动合并。
 
 
