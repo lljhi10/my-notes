@@ -1,0 +1,4 @@
+check out切换到v1.2分支
+合并：
+git merge v1.0 （当前分支合并v1.0）
+然后comit push
