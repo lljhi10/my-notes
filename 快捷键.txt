@@ -20,7 +20,7 @@ ctrl+alt+t  在idea中添加try/catch的快捷键
 ctrl+shift+u    小写改大写
 
 cmd:常用:
-ip:       ipconfig -all
+ip:       ipconfig -all(ifconfig -a)
 端口:  netstat -ano
 查询指定端口:netstat -aon|findstr "49157"
  用jar启动项目:  java -jar target/horizon-coupon-1.2-2018-04-25_11_25.jar --server.port=8082 
@@ -33,4 +33,5 @@ cd h-1/logs/
 tail -f hyperjvm.log
 
 192.168.205.129
+192.168.37.128
 
