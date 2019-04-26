@@ -1,0 +1,482 @@
+{
+	"info": {
+		"_postman_id": "63585848-c8ac-4788-b959-3a7ba7e4de7b",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8044/product/product/del",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "ids",
+							"value": "123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8044/product/product/del",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8044",
+					"path": [
+						"product",
+						"product",
+						"del"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8044add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "111",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8044/product/product/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8044",
+					"path": [
+						"product",
+						"product",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8044/product/product/list.json",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"page\": 1,\n\"limit\": 10\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8044/product/product/list.json",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8044",
+					"path": [
+						"product",
+						"product",
+						"list.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8044登录",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "page",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "limit",
+							"value": "10",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8044/merchantLogin?name=admin&pwd=123456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8044",
+					"path": [
+						"merchantLogin"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "admin"
+						},
+						{
+							"key": "pwd",
+							"value": "123456"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8044/product/product/queryall.json",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8044/product/product/queryall.json",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8044",
+					"path": [
+						"product",
+						"product",
+						"queryall.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8044/product_attr/productAttr/querybyid.json",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8044/product_attr/productAttr/querybyid.json?productId=123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8044",
+					"path": [
+						"product_attr",
+						"productAttr",
+						"querybyid.json"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8044/product_spec/productSpec/querybyparentid.json?parentId=123",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8044/product_spec/productSpec/querybyparentid.json?parentId=9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8044",
+					"path": [
+						"product_spec",
+						"productSpec",
+						"querybyparentid.json"
+					],
+					"query": [
+						{
+							"key": "parentId",
+							"value": "9"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8044/product_sku/productSku/autosku.json?productId=123",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8044/product_sku/productSku/autosku.json?productId=201",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8044",
+					"path": [
+						"product_sku",
+						"productSku",
+						"autosku.json"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "201"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/product_sku/productSku/add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "productId",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "specPrice",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "specStock",
+							"value": "1000",
+							"type": "text"
+						},
+						{
+							"key": "propPath",
+							"value": "1:2;2:3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8044/product_sku/productSku/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8044",
+					"path": [
+						"product_sku",
+						"productSku",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8044/product_spec/productSpec/edit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\t\"id\":\"300\",\n\t\"productId\":\"201\",\n\t\"parentId\":\"7\",\n\t\"name\":\"骚粉色\"\n\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8044/product_spec/productSpec/edit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8044",
+					"path": [
+						"product_spec",
+						"productSpec",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8044/product_spec/productSpec/edit Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\t\"id\":\"300\",\n\t\"productId\":\"201\",\n\t\"parentId\":\"7\",\n\t\"name\":\"骚粉色\"\n\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8044/product_category/productCategory/find/category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8044",
+					"path": [
+						"product_category",
+						"productCategory",
+						"find",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/product_attr/productAttr/add/attr",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\":\"2ad5d7d7ee7f576c770328499d0942f6\",\r\n\"productId\":\"1001\",\r\n\"name\":\"颜色\",\r\n\"specsList\":[\r\n{\r\n\"productId\":\"1001\",\r\n\"name\":\"红色\"\r\n},\r\n{\r\n\"id\":\"b2b4c8601411bb6c1ef79a05ae0b5742\",\r\n\"productId\":\"1001\",\r\n\"name\":\"绿色\"\r\n}\r\n]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8044/product_attr/productAttr/add/attr",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8044",
+					"path": [
+						"product_attr",
+						"productAttr",
+						"add",
+						"attr"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
