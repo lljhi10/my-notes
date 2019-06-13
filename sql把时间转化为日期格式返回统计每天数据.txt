@@ -1,0 +1,21 @@
+	cast( pay_time AS date ) AS 'date',
+sql把时间转化为日期格式返回
+
+
+
+例子：
+SELECT
+	cast( pay_time AS date ) AS 'date',
+	count( id ) AS 'orderCount',
+	sum( pay_price ) AS 'orderAmount' 
+FROM
+	dw_order 
+WHERE
+	pay_time IS NOT NULL 
+	AND pay_time BETWEEN '2019-5-22 00:00:00' 
+	AND '2019-6-11 23:59:59'
+	and merchant_id='6f67b697f0bd57dfcfc6eaf5c45fd464'
+GROUP BY
+	date 
+ORDER BY
+	date ASC
