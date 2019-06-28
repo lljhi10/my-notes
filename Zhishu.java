@@ -1,4 +1,4 @@
-package com.dwalk.merchant.product.entity;
+﻿
 
 import java.util.Scanner;
 
