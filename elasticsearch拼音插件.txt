@@ -1,0 +1,9 @@
+https://www.cnblogs.com/dashuaiguo/p/10014978.html
+这个教程挺好，就是很多本应该是post的，他用get或者put，然后ik和拼音结合的setting配置是错的，配置用下面的。
+
+https://blog.csdn.net/shi_yi_fei/article/details/85266449
+
+
+分页查询：
+        Pageable pageable = new PageRequest(pageNumber, pageSize);
+        Page<ProETO> byNameOrPrice = repository.findByNameOrPrice(name, price, pageable);
